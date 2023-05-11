@@ -1,6 +1,8 @@
 <template>
-	<view class="contain"  :style="{backgroundImage:'url(' + require(imgUrl) + ')'}">
-		
+	<view class="contain">
+		<view class="image-area">
+			<image class="logos" :src="imgUrl"></image>
+		</view>
 		<view v-show="showBtns" @click="sureBtnAction" class="btns-area">
 			<text>按钮</text>
 		</view>
@@ -43,21 +45,30 @@
 	width: 100%;
 	height: 100%;
 	
-	background-repeat: no-repeat;
-	background-size: cover;
-	font-size: 20px;
+	// background-repeat: no-repeat;
+	// background-size: cover;
+	// font-size: 20px;
 	
-	display: flex;
-	flex-direction: column-reverse;
-	align-items: center;
-	
+	// display: flex;
+	// flex-direction: column-reverse;
+	// align-items: center;
+	.image-area{
+		height: 100%;
+		width: 100%;
+		.logos{
+			height: 100%;
+			width: 100%;
+		}
+	}
 	
 	.btns-area{
+		position: absolute;
+		bottom: 120px;
 		width: 120px;
 		height: 45px;
 		background-color: rgba(12, 222, 120, 0.2);
 		color: #fff;
-		margin-bottom: 120px;
+		// margin-bottom: 120px;
 		
 		display: flex;
 		align-items: center;
