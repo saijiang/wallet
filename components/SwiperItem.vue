@@ -5,7 +5,6 @@
 		</view>
 		<view v-show="showBtns" @click="sureBtnAction" class="btns-area">
 			<text>按钮</text>
-			<text>{{imgUrl}}</text>
 		</view>
 		
 	</view>
