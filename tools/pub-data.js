@@ -20,7 +20,7 @@ const pubdata = function (){
 		file:'enterAuthen/enterSuccess'
 	}]
 	
-	let lanchLogo = ['../../static/lancher/lanch0.png','../../static/lancher/lanch1.png','../../static/lancher/lanch0.png']
+	let lanchLogo = ['../static/lancher/lanch0.png','../static/lancher/lanch1.png','../static/lancher/lanch0.png']
 	
 	return {
 		popItemArray,
