@@ -1,5 +1,5 @@
 <template>
-	<view class="contain"  :style="{backgroundImage:'url(imgUrl)'}">
+	<view class="contain"  :style="{backgroundImage:'url(' + require(imgUrl) + ')'}">
 		
 		<view v-show="showBtns" @click="sureBtnAction" class="btns-area">
 			<text>按钮</text>
