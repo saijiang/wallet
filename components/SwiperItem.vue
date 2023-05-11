@@ -5,6 +5,7 @@
 		</view>
 		<view v-show="showBtns" @click="sureBtnAction" class="btns-area">
 			<text>按钮</text>
+			<text>{{imgUrl}}</text>
 		</view>
 		
 	</view>
@@ -49,15 +50,16 @@
 	// background-size: cover;
 	// font-size: 20px;
 	
-	// display: flex;
-	// flex-direction: column-reverse;
-	// align-items: center;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
 	.image-area{
 		height: 100%;
 		width: 100%;
 		.logos{
 			height: 100%;
 			width: 100%;
+			background-color: blue;
 		}
 	}
 	
