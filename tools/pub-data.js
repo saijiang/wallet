@@ -29,6 +29,6 @@ const pubdata = function (){
 	
 }
 
-export {
+export  {
 	pubdata
 }

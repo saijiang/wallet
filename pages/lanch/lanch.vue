@@ -1,9 +1,9 @@
 <template>
-	<view>
-		<!-- <button @click="sureBtnAction">确定</button> -->
-		<swiper>
+	<view class="contains">
+		
+		<swiper class="swiper-area">
 			<swiper-item v-for="(item,index) in logoArr" :key="index">
-				<image :src="item"></image>
+				<image class="logos" :src="item"></image>
 			</swiper-item>
 		</swiper>
 		
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-	import {lanchLogo} from '../../tools/pub-data.js'
+	import {pubdata} from '../../tools/pub-data.js'
 	
 	export default {
 		data() {
@@ -19,8 +19,10 @@
 				logoArr:[]
 			};
 		},
-		onLoad() {
-		   this.logoArr = lanchLogo	
+		created() {
+		   const pupData = pubdata()
+		   this.logoArr = pupData.lanchLogo	
+		 
 		},
 		methods:{
 			sureBtnAction(){
@@ -38,6 +40,18 @@
 	}
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+.contains{
+	height: 100%;
+	.swiper-area{
+		width: 100%;
+		height: 100%;
+		background-color: orange;
+		.logos{
+			width: 100%;
+			height: 100%;
+			background-color: blue;
+		}
+	}
+}
 </style>
