@@ -1,0 +1,105 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		
+		 {
+		    "path" : "pages/lanch/index",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+		,{
+		    "path" : "pages/lanch/lanch",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"disableScroll": true
+			}
+		}
+	    ,{
+            "path" : "pages/index/initialOpen",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "企业数据钱包",
+                "enablePullDownRefresh": false,
+				"disableScroll": true,
+				"app-plus": {
+					"subNVues": [
+						{
+							"id": "walletpop",
+							"path": "pages/index/subnvue/walltetpop",
+							"type": "popup",
+							"style": {
+								"background":"transparent",
+								"position": "absolute",
+								"mask": "rgba(0,0,0,0)"
+								
+							}
+						}
+					]
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/overOpen",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "企业数据钱包",
+                "enablePullDownRefresh": false,
+				"disableScroll": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/createkey",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "创建密钥",
+                "enablePullDownRefresh": false,
+				"disableScroll": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/home/home",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "企业数据钱包",
+                "enablePullDownRefresh": false,
+				"disableScroll": true,
+				"navigationStyle": "custom"
+            }
+            
+        }
+        ,{
+            "path" : "pages/enterAuthen/enterSuccess",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "实名认证",
+                "enablePullDownRefresh": false,
+				"disableScroll": true
+            }
+            
+        }
+
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}

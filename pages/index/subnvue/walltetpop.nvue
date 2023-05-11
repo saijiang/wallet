@@ -1,0 +1,147 @@
+<template>
+	<div class="wrapper" @click.stop>
+		<view class="contains">
+			
+			<view class="title-area">
+				<text>企业数据钱包功能</text>
+			</view>
+			<view class="center-area">
+				<view class="infor-area">
+					<image class="logos"></image>
+					<view style="flex: 1;">
+						<text class="infor-titles-css">实名认证</text>
+						<text class="infor-subtitles-css">实时核验企业身份真实性</text>
+					</view>
+				</view>
+				<view class="infor-area">
+					<image class="logos"></image>
+					<view  style="flex: 1;">
+						<text class="infor-titles-css">企业信息</text>
+						<text class="infor-subtitles-css">维护企业基本信息,经营信息等,开展信息数字化管理,建议企业自身画像及信用体系</text>
+					</view>
+				</view>
+				<view class="infor-area">
+					<image class="logos"></image>
+					<view style="flex: 1;">
+						<text class="infor-titles-css">企业账本</text>
+						<text class="infor-subtitles-css">依靠账户账套,进行自动结算费用,实现基于平台的全国统一的多方法分账结算</text>
+					</view>
+				</view>
+				<view class="infor-area">
+					<image class="logos"></image>
+					<view style="flex: 1;height: 100%;width: 100%;">
+						<text class="infor-titles-css">电子合同</text>
+						<text class="infor-subtitles-css">线上签署合同,实时追踪合同状态,合同信息加密,拥有完整证据链</text>
+					</view>
+				</view>
+			</view>
+			<view class="btns-area">
+			  <text @click="upDateAction" class="btns">知道了</text>
+			</view>
+		</view>
+	</div>
+</template>
+
+<script>
+	export default {
+		data(){
+			return{
+				
+			}
+		},
+		methods:{
+			upDateAction(){
+	           uni.$emit('walletpop')
+			}
+		},
+		created() {
+			// 安卓手机点击底部物理返回键时 subnvue 不会消失
+			plus.key.addEventListener("backbutton",function(){
+				console.log('backbutton')
+			});
+		}
+	}
+</script>
+
+<style lang="scss">
+.wrapper{
+	background-color: rgba(0, 0, 0, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contains{
+	background-color: #fff;
+	height: 450px;
+	width: 300px;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	
+	.title-area{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 18px;
+		margin-top: 15px;
+	}
+	
+	.center-area{
+		flex: 1;
+	
+		display: flex;
+		flex-direction: column;
+		
+		.infor-area{
+			margin-top: 10px;
+			display: flex;
+			flex-direction: row;
+			
+			
+			.logos{
+				width: 16px;
+				height: 16px;
+				background-color: orange;
+				margin-top: 3px;
+				margin-right: 8px;
+				margin-left: 8px;
+			}
+			
+			.infor-titles-css{
+				font-size: 15px;
+			}
+			.infor-subtitles-css{
+				font-size: 15px;
+				color: rgba(0, 0, 0, 0.4);
+				width: 260px;
+			}
+			
+			
+		}
+	}
+
+	.btns-area{
+		height: 50px;
+		margin-bottom: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.btns{
+			background-color: #0076ff;
+			color: #fff;
+			width: 120px;
+			padding: 10px 0;
+			text-align: center;
+			border-radius: 5px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+}
+
+
+
+</style>
