@@ -1,7 +1,7 @@
 <template>
 	<view class="contains">
 		
-		<swiper class="swiper-area">
+		<swiper class="swiper-area" :indicator-dots="true">
 			<swiper-item v-for="(item,index) in logoArr" :key="index">
 				<image class="logos" :src="item"></image>
 			</swiper-item>
@@ -46,7 +46,6 @@
 	.swiper-area{
 		width: 100%;
 		height: 100%;
-		background-color: orange;
 		.logos{
 			width: 100%;
 			height: 100%;
