@@ -14,9 +14,11 @@
 
 <style>
 	/*每个页面公共css */
+	@import url("static/inconfont/iconfont.css");
 	page{
 		background-color: rgba(0, 0, 0, 0.1);
 		height: 100%;
 	}
+	
 	
 </style>

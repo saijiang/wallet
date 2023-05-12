@@ -9,7 +9,7 @@ const pubdata = function (){
 	},{
 		icon:'../../static/logo.png',
 		name:'企业账本',
-		file:'enterAuthen/enterSuccess'
+		file:'accountBook/accbinding'
 	},{
 		icon:'../../static/logo.png',
 		name:'VIP会员',
@@ -22,9 +22,24 @@ const pubdata = function (){
 	
 	let lanchLogo = ['/static/lancher/lanch0.png','/static/lancher/lanch1.png','/static/lancher/lanch0.png'] // 动态设置时 本地图片不用添加.. 或者 @
 	
+	let platformData = [{
+		name:'铁路运费贷服务管理平台',
+		select:false
+	},{
+		name:'票据服务管理平台',
+		select:false
+	},{
+		name:'汇融e链服务管理平台',
+		select:false
+	},{
+		name:'零立方服务管理平台',
+		select:false
+	}]
+	
 	return {
 		popItemArray,
-		lanchLogo
+		lanchLogo,
+		platformData
 	}
 	
 }
