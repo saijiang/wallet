@@ -46,6 +46,9 @@
 </script>
 
 <style lang="scss" scoped>
+	page{
+		background-color: transparent;
+	}
 .contains{
 	height: 100%;
 	.swiper-area{
