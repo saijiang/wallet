@@ -1,11 +1,15 @@
 <template>
 	<view>
 		<scroll-item :title-arr="titleArr" :setpnumber="setpnumber"></scroll-item>
+		<view>
+			<sign-one v-if="setpnumber == 1"></sign-one>
+		</view>
 	</view>
 </template>
 
 <script>
 	import ScrollItem from '../../components/ScroItem.vue'
+	import SignOne from '../../components/SignStepOne.vue'
 	export default {
 		data() {
 			return {
@@ -14,7 +18,8 @@
 			};
 		},
 		components:{
-			ScrollItem
+			ScrollItem,
+			SignOne
 		}
 		
 		
