@@ -39,7 +39,13 @@
 			//开通专户
 			openAccountAction(){
 				uni.navigateBack({
-					delta:2
+					delta:2,
+					success: () => {
+						uni.showToast({
+							icon:'success',
+							title:'开通成功'
+						})
+					}
 				})
 			}
 			
