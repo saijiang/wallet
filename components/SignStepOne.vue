@@ -8,21 +8,21 @@
 			<text>法定代表人/负责人</text>
 			<view class="item-area">
 				<view class="left-t-css">
-					<text>*</text>
+					<text class="start-css">*</text>
 					<text>姓名:</text>
 				</view>
-				<input placeholder="请输入"/>
+				<input class="input-css" placeholder="请输入"/>
 			</view>
 			<view class="item-area">
 				<view class="left-t-css">
-					<text>*</text>
+					<text class="start-css">*</text>
 					<text>证件号码:</text>
 				</view>
-				<input placeholder="请输入"/>
+				<input class="input-css" placeholder="请输入" maxlength="18"/>
 			</view>
 		</view>
 		
-		<button class="btns-css">下一步</button>
+		<button class="btns-css" @click="oneNextAction">下一步</button>
 		
 		
 		
@@ -36,6 +36,11 @@
 			return {
 				
 			};
+		},
+		methods:{
+			oneNextAction(){
+				this.$emit('oneNext')
+			}
 		}
 	}
 </script>
@@ -75,7 +80,17 @@
 		align-items: center;
 		
 		.left-t-css{
-			width: 120px;
+			width: 100px;
+			.start-css{
+				color: red;
+				margin-right: 2px;
+			}
+		}
+		.input-css{
+			flex: 1;
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			height: 40px;
+			padding-left: 10px;
 		}
 		
 	}
