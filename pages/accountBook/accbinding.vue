@@ -55,6 +55,18 @@
 				objList:['1','2','3','4','5']
 			};
 		},
+		onLoad: () => {
+			
+			uni.$on('clickAction',function(res){
+				uni.getSubNVueById('fund').hide() // 隐藏 subnvue 
+				var type = res.type
+			    if(type == 'sure'){
+					uni.showToast({
+						title:res.value
+					})
+				}
+			})
+		},
 		methods:{
 			bindingPayAction(){
 				uni.navigateTo({

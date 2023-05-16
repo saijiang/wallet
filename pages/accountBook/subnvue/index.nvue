@@ -1,12 +1,23 @@
 <template>
-	<view>
+	<view class="contains" @click.stop>
 		<view class="center-area">
-			<view>
+			<view class="top-tit-area">
 				<text>xx专用平台</text>
 			</view>
-			<input placeholder="请输入金额" type="number">
-			  <text>元</text>
-			</input>
+			
+			<view class="center-areas">
+				<view class="input-areas">
+					<input v-model="money" style="flex: 1;padding-left: 10px;" placeholder="请输入金额"/>
+					<text>元</text>
+				</view>
+			</view>
+			<view class="bottom-areas">
+				
+				<text @click="cancelAction('cancel')" class="texts-css">取消</text>
+				<text @click="cancelAction('sure')" class="texts-css texts-rights">确定</text>
+				
+			</view>
+
 		</view>
 	</view>
 </template>
@@ -15,18 +26,83 @@
 	export default {
 		data() {
 			return {
-				
+				money:''
 			};
+		},
+		methods:{
+		  cancelAction(type){
+			  var obj = {
+				  type:type,
+				  value:this.money
+			  }
+			  uni.$emit('clickAction',obj)
+		  }
+		},
+		created() {
+			// 安卓手机点击底部物理返回键时 subnvue 不会消失
+			plus.key.addEventListener("backbutton",function(){
+				console.log('backbutton')
+			});
 		}
 	}
 </script>
 
 <style lang="scss" scoped>
-
+.contains{
+	background-color: rgba(0, 0, 0, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 .center-area{
 	background-color: #fff;
-	width: 300px;
-	height: 250px;
+	width: 320px;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	.top-tit-area{
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		height: 40px;
+		padding: 0 10px;
+		font-size: 15px;
+		
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	.center-areas{
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.input-areas{
+			height: 46px;
+			width: 300px;
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+	.bottom-areas{
+		height: 40px;
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		.texts-css{
+			text-align: center;
+			flex: 1;
+			
+		}
+		.texts-rights{
+			border-left: 1px solid rgba(0, 0, 0, 0.1);
+			color: #0076ff;
+		}
+	}
 }
 
 </style>

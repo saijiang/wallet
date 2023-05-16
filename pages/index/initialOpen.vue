@@ -19,7 +19,6 @@
 			
 			uni.$on('walletpop',function(res){
 				uni.getSubNVueById('walletpop').hide() // 隐藏 subnvue 
-
 			})
 		},
 		methods:{
