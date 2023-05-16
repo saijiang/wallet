@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<scroll-view class="scr-area">
+		<z-paging>
 			
 		
 			<view class="item-area">
@@ -38,13 +38,13 @@
 						<text>0.00</text>
 					</view>
 					<view class="btns-areas">
-						<text>资金拨入</text>
-						<text style="margin-left: 15px;">交易明细</text>
+						<text @click="fundAllocationAction(item)">资金拨入</text>
+						<text @click="checkDetailAction(item)" style="margin-left: 15px;">交易明细</text>
 					</view>
 				</view>
 			</view>
 			
-		</scroll-view>
+		</z-paging>
 	</view>
 </template>
 
@@ -63,6 +63,17 @@
 			},
 			bindingReachAction(){
 				
+			},
+			// 资金拨入
+			fundAllocationAction(item){
+				const subNVue = uni.getSubNVueById('fund')
+				subNVue.show('fade-in',200,function(){
+					// 打开后进行一些操作
+				})
+			},
+			// 详情
+			checkDetailAction(item){
+				alert(item)
 			}
 		}
 	}

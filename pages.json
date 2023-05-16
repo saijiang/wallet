@@ -101,7 +101,21 @@
             {
                 "navigationBarTitleText": "企业账本",
                 "enablePullDownRefresh": false,
-				"disableScroll": true
+				"disableScroll": true,
+				"app-plus": {
+					"subNVues": [
+						{
+							"id": "fund",
+							"path": "pages/accountBook/subnvue/index",
+							"type": "popup",
+							"style": {
+								"background":"transparent",
+								"position": "absolute",
+								"mask": "rgba(0,0,0,0)"
+							}
+						}
+					]
+				}
             }
             
         }
