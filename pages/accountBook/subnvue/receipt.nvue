@@ -1,6 +1,9 @@
 <template>
-	<div>
-		
+	<div class="contains" @click.stop>
+		<view>
+			<view class="top-area"></view>
+			<view class="bottom-area"></view>
+		</view>
 	</div>
 </template>
 
@@ -10,6 +13,26 @@
 	}
 </script>
 
-<style>
+<style lang="scss" scoped>
+.contains{
+	background-color: rgba(0, 0, 0, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
+.top-area{
+	width: 200px;
+	height: 250px;
+	background-color: #fff;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+.bottom-area{
+	width: 200px;
+	height: 250px;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
 </style>
