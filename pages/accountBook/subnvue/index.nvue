@@ -2,7 +2,7 @@
 	<view class="contains" @click.stop>
 		<view class="center-area">
 			<view class="top-tit-area">
-				<text>xx专用平台</text>
+				<text>{{title}}专用平台</text>
 			</view>
 			
 			<view class="center-areas">
@@ -26,10 +26,15 @@
 	export default {
 		data() {
 			return {
-				money:''
+				money:'',
+				title:''
 			};
 		},
-		
+		onShow: () => {
+		  uni.$on('submoney',function(res) =>{
+			  this.title = res
+		  })	
+		},
 		methods:{
 		  cancelAction(type){
 			  var obj = {

@@ -58,7 +58,7 @@
 		onLoad: () => {
 			
 			uni.$on('clickAction',function(res){
-				uni.getSubNVueById('fund').close() // 隐藏 subnvue 
+				uni.getSubNVueById('fund').hide() // 隐藏 subnvue 
 				var type = res.type
 			    if(type == 'sure'){
 					uni.showToast({
