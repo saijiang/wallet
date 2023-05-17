@@ -1,8 +1,14 @@
 <template>
 	<div class="contains" @click.stop>
 		<view>
-			<view class="top-area"></view>
-			<view class="bottom-area"></view>
+			<view class="tops-area">
+				<view class="bottom-left-radio"></view>
+				<view class="bottom-right-radio"></view>
+			</view>
+			<view class="bottoms-area">
+				<view class="bottom-left-radius"></view>
+				<view class="bottom-right-radius"></view>
+			</view>
 		</view>
 	</div>
 </template>
@@ -21,18 +27,55 @@
 	justify-content: center;
 }
 
-.top-area{
-	width: 200px;
-	height: 250px;
-	background-color: #fff;
-	border-bottom-left-radius: 20px;
-	border-bottom-right-radius: 20px;
-}
-.bottom-area{
-	width: 200px;
-	height: 250px;
-	background-color: rgba(0, 0, 0, 0.8);
-	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;
-}
+  .tops-area{
+  	width: 100px;
+  	height: 150px;
+  	background-color: #fff;
+	position: relative;
+	
+	.bottom-left-radio{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 15px;
+		height: 15px;
+		// transform: rotate(90deg);
+		background: radial-gradient(15px at left bottom,rgba(0,0,0,0.2) 50px,transparent 50%);
+	}
+	.bottom-right-radio{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 15px;
+		height: 15px;
+		transform: rotate(-90deg);
+		background: radial-gradient(15px at left bottom,rgba(0,0,0,0.2) 50px,transparent 50%);
+	}
+  	
+  }
+  .bottoms-area{
+  	width: 100px;
+  	height: 150px;
+  	background-color: #0076ff;
+	position: relative;
+	.bottom-left-radius{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 15px;
+		height: 15px;
+		transform: rotate(90deg);
+		background: radial-gradient(15px at left bottom,red 50px,transparent 50%);
+	}
+	.bottom-right-radius{
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 15px;
+		height: 15px;
+		transform: rotate(180deg);
+		background: radial-gradient(15px at left bottom,red 50px,transparent 50%);
+	}
+ 
+  }
 </style>

@@ -31,7 +31,7 @@
 			};
 		},
 		onShow: () => {
-		  uni.$on('submoney',function(res) =>{
+		  uni.$on('submoney',function(res){
 			  this.title = res
 		  })	
 		},

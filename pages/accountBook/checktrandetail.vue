@@ -34,6 +34,8 @@
 			</view>
 		</view>
 	
+
+
 	</view>
 </template>
 
@@ -95,6 +97,10 @@
 		  justify-content: space-between;
 	  }
   }
+  
+
+
+
 
 
 </style>
