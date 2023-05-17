@@ -11,7 +11,7 @@
 
 			
 			
-			<view class="item-area" v-for="(item,index) in objlist" :key="index">
+			<view class="item-area" v-for="(item,index) in objlist" :key="index" @click="checkItemAction(item)">
 				<image class="logo-css"></image>
 				<view class="right-bottom-area">
 					<view class="right-areas">
@@ -35,6 +35,13 @@
 			return {
 				objlist:['1','2','3','4','5']
 			};
+		},
+		methods:{
+			checkItemAction(item){
+				uni.navigateTo({
+					url:'/pages/accountBook/checktrandetail?id='+item
+				})
+			}
 		}
 	}
 </script>

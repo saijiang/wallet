@@ -149,6 +149,30 @@
             }
             
         }
+        ,{
+            "path" : "pages/accountBook/checktrandetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "查看详情",
+                "enablePullDownRefresh": false,
+				"disableScroll": true,
+				"app-plus": {
+					"subNVues": [
+						{
+							"id": "receipt",
+							"path": "pages/accountBook/subnvue/receipt",
+							"type": "popup",
+							"style": {
+								"background":"transparent",
+								"position": "absolute",
+								"mask": "rgba(0,0,0,0)"
+							}
+						}
+					]
+				}
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
