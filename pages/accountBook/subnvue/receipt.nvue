@@ -1,14 +1,49 @@
 <template>
 	<div class="contains" @click.stop>
-		<view>
+		<view class="b-areas">
 			<view class="tops-area">
 				<view class="bottom-left-radio"></view>
 				<view class="bottom-right-radio"></view>
+				<view class="mes-areas">
+					<image class="mes-logos"></image>
+					<text class="mes-titles">转账成功</text>
+					<view class="ifor-areas">
+						<text>业务发生时间</text>
+						<text>2023-09-09</text>
+					</view>
+					<view class="ifor-areas">
+						<text>支付流水号</text>
+						<text>1212121212</text>
+					</view>
+					<view class="ifor-areas">
+						<text>交易金额</text>
+						<text>100</text>
+					</view>
+				</view>
 			</view>
 			<view class="bottoms-area">
 				<view class="bottom-left-radius"></view>
 				<view class="bottom-right-radius"></view>
+				<view class="bottom-infor-area">
+					<view class="infor-item-views">
+						<text>收款方</text>
+						<text>金链</text>
+					</view>
+					<view class="infor-item-views">
+						<text>收款账户</text>
+						<text>1212121212121212</text>
+					</view>
+					<view class="infor-item-views">
+						<text>付款方</text>
+						<text>金链</text>
+					</view>
+					<view class="infor-item-views">
+						<text>付款方账户</text>
+						<text>12121212121212</text>
+					</view>
+				</view>
 			</view>
+		    <image class="pay-logos"></image>
 		</view>
 	</div>
 </template>
@@ -27,9 +62,20 @@
 	justify-content: center;
 }
 
+
+	.b-areas{
+		width: 250px;
+		position: relative;
+		background-color: blueviolet;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
   .tops-area{
-  	width: 100px;
-  	height: 150px;
+  	width: 250px;
+  	height: 200px;
   	background-color: #fff;
 	position: relative;
 	
@@ -51,10 +97,42 @@
 		transform: rotate(-90deg);
 		background: radial-gradient(15px at left bottom,rgba(0,0,0,0.2) 50px,transparent 50%);
 	}
-  	
+  	.mes-areas{
+		position: relative;
+		top: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.mes-logos{
+			height: 30px;
+			width: 30px;
+			background-color: #0076ff;
+			margin-top: 10px;
+		}
+		.mes-titles{
+			font-weight: bold;
+			margin: 10px 0;
+			font-size: 15px;
+		}
+		.ifor-areas{
+			color: rgba(0,0,0,0.2);
+			margin-top: 10px;
+			width: 100%;
+			font-size: 10px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+	
+	
   }
+  
   .bottoms-area{
-  	width: 100px;
+  	width: 250px;
   	height: 150px;
   	background-color: #0076ff;
 	position: relative;
@@ -77,5 +155,34 @@
 		background: radial-gradient(15px at left bottom,red 50px,transparent 50%);
 	}
  
+	 .bottom-infor-area{
+		 position: relative;
+		 top: 20px;
+		 width: 250px;
+		 
+		 .infor-item-views{
+			 display: flex;
+			 flex-direction: row;
+			 align-items: center;
+			 justify-content: space-between;
+			 margin: 0 10px 10px 10px;
+			 
+			 color: rgba(0,0,0,0.2);
+			 font-size: 12px;
+			 
+		 }
+	 }
+ 
   }
+  
+  .pay-logos{
+	  width: 60px;
+	  height: 60px;
+	  background-color: orange;
+	  position: absolute;
+	  right: 15px;
+	  bottom: 120px;
+  }
+
+
 </style>
