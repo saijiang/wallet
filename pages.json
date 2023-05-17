@@ -139,6 +139,16 @@
             }
             
         }
+        ,{
+            "path" : "pages/accountBook/trandetails",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "交易明细",
+                "enablePullDownRefresh": false,
+				"disableScroll": true
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

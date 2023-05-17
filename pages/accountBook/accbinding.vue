@@ -86,7 +86,9 @@
 			},
 			// 详情
 			checkDetailAction(item){
-				alert(item)
+				uni.navigateTo({
+					url:'/pages/accountBook/trandetails'
+				})
 			}
 		}
 	}
