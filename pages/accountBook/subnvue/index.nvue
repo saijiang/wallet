@@ -29,6 +29,7 @@
 				money:''
 			};
 		},
+		
 		methods:{
 		  cancelAction(type){
 			  var obj = {

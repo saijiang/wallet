@@ -58,7 +58,7 @@
 		onLoad: () => {
 			
 			uni.$on('clickAction',function(res){
-				uni.getSubNVueById('fund').hide() // 隐藏 subnvue 
+				uni.getSubNVueById('fund').close() // 隐藏 subnvue 
 				var type = res.type
 			    if(type == 'sure'){
 					uni.showToast({
@@ -78,6 +78,7 @@
 			},
 			// 资金拨入
 			fundAllocationAction(item){
+				uni.$emit('submoney',item)
 				const subNVue = uni.getSubNVueById('fund')
 				subNVue.show('fade-in',200,function(){
 					// 打开后进行一些操作
