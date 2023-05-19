@@ -27,7 +27,7 @@
 	}
 </script>
 
-<style lang="scss" scoped>
+<style>
 page{
 	background-color: transparent;
 }

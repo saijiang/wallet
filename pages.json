@@ -173,6 +173,26 @@
             }
             
         }
+        ,{
+            "path" : "pages/vipmember/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "VIP会员",
+                "enablePullDownRefresh": false,
+				"disableScroll": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/vipmember/openvip",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "VIP会员",
+                "enablePullDownRefresh": false,
+				"disableScroll": true
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

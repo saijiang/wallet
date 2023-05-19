@@ -13,7 +13,7 @@ const pubdata = function (){
 	},{
 		icon:'../../static/logo.png',
 		name:'VIP会员',
-		file:'enterAuthen/enterSuccess'
+		file:'vipmember/index'
 	},{
 		icon:'../../static/logo.png',
 		name:'管理手机号',
