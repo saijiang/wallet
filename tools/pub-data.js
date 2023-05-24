@@ -17,7 +17,7 @@ const pubdata = function (){
 	},{
 		icon:'../../static/logo.png',
 		name:'管理手机号',
-		file:'enterAuthen/enterSuccess'
+		file:'openphone/index'
 	}]
 	
 	let lanchLogo = ['/static/lancher/lanch0.png','/static/lancher/lanch1.png','/static/lancher/lanch0.png'] // 动态设置时 本地图片不用添加.. 或者 @

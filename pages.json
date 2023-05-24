@@ -193,6 +193,16 @@
             }
             
         }
+        ,{
+            "path" : "pages/openphone/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "管理手机号",
+                "enablePullDownRefresh": false,
+				"disableScroll": true
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

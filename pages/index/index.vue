@@ -1,9 +1,6 @@
 <template>
 	<view class="content">
 		<image class="logo" src="/static/logo.png"></image>
-		<!-- <view class="text-area">
-			<text class="title">{{title}}</text>
-		</view> -->
 		<view class="input-area">
 			<image class="input-logo" src="/static/logo.png"></image>
 			<input v-model="objdata.phone" maxlength="11" placeholder="请输入手机号" type="number"/>
@@ -129,7 +126,7 @@
 		margin-top: 10px;
 		height: 44px;
 		width: 80%;
-		border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
+		border-bottom: rgba(0, 0, 0, 0.2) 1px solid;
 		
 		display: flex;
 		flex-direction: row;
@@ -182,4 +179,9 @@
 		pointer-events: painted;
 	}
 	
+</style>
+<style>
+	page{
+		background-color: #fff;
+	}
 </style>

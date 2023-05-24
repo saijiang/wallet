@@ -1,66 +1,69 @@
 <template>
 	<view>
-		<view class="open-top-area">
-			<image class="open-logos"></image>
-			<view class="open-infor-areas">
-				<text>金链</text>
-				<text>2023-09-09到期(使用中)</text>
-			</view>
-
-		</view>
-	
-		<view class="open-center-areas">
-			<view class="center-title-area">
-				<text>企业数据钱包会员</text>
-			</view>
+		<z-paging>
+			<view class="open-top-area">
+				<image class="open-logos"></image>
+				<view class="open-infor-areas">
+					<text>金链</text>
+					<text>2023-09-09到期(使用中)</text>
+				</view>
 			
-			<view class="center-info-areas">
-				<scroll-view style="white-space: nowrap;" :scroll-x="true">
-					<view style="display: inline-block;margin-top: 5px;"  v-for="(item,index) in objlist" :key="index"  @click="clickItemAction(index)">
-						<view class="info-items-areas">
-							<text class="items-top-title-css">20天</text>
-							<text class="items-bottom-money-css" :class="selMoneyCss(index)">¥0</text>
-							<text v-show="index ==0 || index+1 == objlist.length " class="right-tag-css">{{tagName(index)}}</text>
+			</view>
+				
+			<view class="open-center-areas">
+				<view class="center-title-area">
+					<text>企业数据钱包会员</text>
+				</view>
+				
+				<view class="center-info-areas">
+					<scroll-view style="white-space: nowrap;" :scroll-x="true">
+						<view style="display: inline-block;margin-top: 5px;"  v-for="(item,index) in objlist" :key="index"  @click="clickItemAction(index)">
+							<view class="info-items-areas">
+								<text class="items-top-title-css">20天</text>
+								<text class="items-bottom-money-css" :class="selMoneyCss(index)">¥0</text>
+								<text v-show="index ==0 || index+1 == objlist.length " class="right-tag-css">{{tagName(index)}}</text>
+							</view>
 						</view>
+					</scroll-view>
+			
+				</view>
+			</view>
+				
+			<button class="btns-area-css" @click="openVipAction">立即开通</button>
+			
+			<view class="open-bottom-areas">
+				<text>开通会员可以享受如下功能</text>
+				<view class="have-item-area">
+					<view class="logo-area">
+						<image class="logos"></image>
+						<text>企业信息</text>
 					</view>
-				</scroll-view>
+					<view>
+						<text>维护企业基本信息,经营信息等,开展信息数字化管理,建议企业自身画像及信用体系</text>
+					</view>
+				</view>
+				<view class="have-item-area">
+					<view class="logo-area">
+						<image class="logos"></image>
+						<text>电子合同</text>
+					</view>
+					<view>
+						<text>维护企业基本信息,经营信息等,开展信息数字化管理,建议企业自身画像及信用体系</text>
+					</view>
+				</view>
+				<view class="have-item-area">
+					<view class="logo-area">
+						<image class="logos"></image>
+						<text>企业账本</text>
+					</view>
+					<view>
+						<text>维护企业基本信息,经营信息等,开展信息数字化管理,建议企业自身画像及信用体系</text>
+					</view>
+				</view>
+			</view>
+				
+		</z-paging>
 
-			</view>
-		</view>
-	
-	    <button class="btns-area-css" @click="openVipAction">立即开通</button>
-		
-		<view class="open-bottom-areas">
-			<text>开通会员可以享受如下功能</text>
-			<view class="have-item-area">
-				<view class="logo-area">
-					<image class="logos"></image>
-					<text>企业信息</text>
-				</view>
-				<view>
-					<text>维护企业基本信息,经营信息等,开展信息数字化管理,建议企业自身画像及信用体系</text>
-				</view>
-			</view>
-			<view class="have-item-area">
-				<view class="logo-area">
-					<image class="logos"></image>
-					<text>电子合同</text>
-				</view>
-				<view>
-					<text>维护企业基本信息,经营信息等,开展信息数字化管理,建议企业自身画像及信用体系</text>
-				</view>
-			</view>
-			<view class="have-item-area">
-				<view class="logo-area">
-					<image class="logos"></image>
-					<text>企业账本</text>
-				</view>
-				<view>
-					<text>维护企业基本信息,经营信息等,开展信息数字化管理,建议企业自身画像及信用体系</text>
-				</view>
-			</view>
-		</view>
-	
 	    <uni-popup ref="popup" type="bottom">
 			<view class="pop-areas">
 				<view class="top-pop-area">
