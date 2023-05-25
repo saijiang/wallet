@@ -1,9 +1,12 @@
 import App from './App'
 
+
 // #ifndef VUE3
 import Vue from 'vue'
 import './uni.promisify.adaptor'
+import SendCode from 'components/SendCode.vue'
 Vue.config.productionTip = false
+Vue.component('send-code',SendCode)
 App.mpType = 'app'
 const app = new Vue({
   ...App

@@ -203,6 +203,16 @@
             }
             
         }
+        ,{
+            "path" : "pages/openphone/addphone",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "添加操作员",
+                "enablePullDownRefresh": false,
+				"disableScroll": true
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

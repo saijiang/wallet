@@ -20,7 +20,7 @@
 		    <view class="oper-bottom-areas">
 				<view class="oper-title-areas">
 					<text>操作员</text>
-					<text style="color: blue;">添加操作员</text>
+					<text style="color: blue;" @click="addOperAction">添加操作员</text>
 				</view>
 				<view class="oper-item-areas">
 					<view class="item-areas">
@@ -54,7 +54,7 @@
 				<text>请输入手机号xxx收到的验证码</text>
 			</view>
 			<view class="pop-center-areas">
-				<input class="input-css" placeholder="请输入"/>
+				<input v-model="code" type="number" class="input-css" placeholder="请输入"/>
 				<button class="btns-css" :class="codeBtnsCss()" @click="sendCodeAction">{{sendtitle}}</button>
 			</view>
 			<view class="pop-bottom-areas">
@@ -77,7 +77,8 @@
 			return {
 				sendNUmber:60,
 				sendtitle:'发送验证码',
-				timers:null
+				timers:null,
+				code:''
 			};
 		},
 		methods:{
@@ -114,11 +115,21 @@
 			},
 			// 取消
 			cancelAction(){
-				this.$refs.popup.hide()
+				this.$refs.popup.close()
+				this.code=''
 			},
 			//确定
 			sureAction(){
-				this.$refs.popup.hide()
+				this.$refs.popup.close()
+				this.code=''
+				console.log('确定')
+			},
+			// 添加操作员
+			addOperAction(){
+				// this.$refs.popup.open()
+				uni.navigateTo({
+					url:'/pages/openphone/addphone'
+				})
 			},
 			// 发送验证码按钮样式
 			codeBtnsCss(){
