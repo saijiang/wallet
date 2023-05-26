@@ -36,10 +36,27 @@ const pubdata = function (){
 		select:false
 	}]
 	
+	
+	let wobjlist = [
+		{
+			name:'电子合同',
+			file:'elecontract/index'
+		},
+		{
+			name:'企业账单',
+			file:''
+		},
+		{
+			name:'数据资产',
+			file:''
+		}
+	]
+	
 	return {
 		popItemArray,
 		lanchLogo,
-		platformData
+		platformData,
+		wobjlist
 	}
 	
 }

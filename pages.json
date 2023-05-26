@@ -213,6 +213,16 @@
             }
             
         }
+        ,{
+            "path" : "pages/elecontract/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "电子合同",
+                "enablePullDownRefresh": false,
+				"disableScroll": true
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

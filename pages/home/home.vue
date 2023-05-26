@@ -32,6 +32,23 @@
 			</view>
 			<tabbar-item :title-array="itemArr" :current-table="currentTab" @selectItem="selectItem"></tabbar-item>
 			
+			<view style="width: 100%;">
+				<view v-if="currentTab == 1" class="f-bottom-area">
+					<view class="tab-item-bottom" v-for="(item,index) in wobjlist" :key="index" @click="itemPageAction(item)">
+						<image class="logos"></image>
+						<text>{{item.name}}</text>
+					</view>
+				</view>
+				<view v-else-if="currentTab == 2" class="f-bottom-area">
+					<view class="tab-item-bottom" v-for="(item,index) in zobjlist" :key="index">
+						<image class="logos"></image>
+						<text>{{item}}</text>
+					</view>
+				</view>
+			</view>
+			
+			
+			
 		</view>
 		
 
@@ -53,7 +70,12 @@
 				statusBarHeight: app.globalData.statusBarHeight, //状态栏高度
 				itemArr:['我的资产','资产管理'],
 				currentTab:1,
-				popItemArray:[]
+				popItemArray:[],
+				
+				wobjlist:[],
+				zobjlist:[]
+				
+				
 			};
 		},
 		components:{
@@ -69,6 +91,8 @@
 			
 			const pupData = pubdata()
 			this.popItemArray = pupData.popItemArray
+			this.wobjlist = pupData.wobjlist
+			this.zobjlist = pupData.zobjlist
 		},
 		methods:{
 			backEvent(){
@@ -96,6 +120,7 @@
 			},
 			selectItem(n){
 				console.log(n)
+				this.currentTab = n
 			},
 			popItemAction(item){
 				var that = this
@@ -105,7 +130,16 @@
 						that.$refs.showRight.close()
 					}
 				})
+			},
+			// 点击 各个分类框
+			itemPageAction(item){
+				uni.navigateTo({
+					url:`../${item.file}`
+				})
 			}
+			
+			
+			
 		}
 	}
 </script>
@@ -177,6 +211,31 @@
 	}
 	
 	
+}
+
+
+
+.f-bottom-area{
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+.tab-item-bottom{
+	margin-left: 20px;
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.logos{
+		width: 80px;
+		height: 60px;
+		margin-bottom: 5px;
+		background-color: orange;
+	}
 }
 
 </style>
