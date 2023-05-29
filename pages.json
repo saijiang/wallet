@@ -63,6 +63,14 @@
             }
             
         }
+		,{
+			"path": "pages/index/forgetpassword",
+			"style": {
+				"navigationBarTitleText": "找回密钥",
+				"enablePullDownRefresh": false,
+				"disableScroll": true
+			}
+		}
         ,{
             "path" : "pages/index/createkey",
             "style" :                                                                                    

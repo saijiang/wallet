@@ -12,7 +12,10 @@
 				<text>{{sendtitle}}</text>
 			</view>
 		</view>
-		<button class="btns" :class="loginBtnsCss()" @click="loginBtnsAction">登录</button>
+		<view class="btns" :class="loginBtnsCss()" @click="loginBtnsAction">
+			<text>登录</text>
+		</view>
+		<!-- <button class="btns" :class="loginBtnsCss()" @click="loginBtnsAction">登录</button> -->
 	</view>
 </template>
 
@@ -26,7 +29,8 @@
 				objdata:{
 					phone:'',
 					code:''
-				}
+				},
+				openstatus:'' // 是否开通钱包状态标识
 			}
 		},
 		onLoad() {
@@ -86,9 +90,18 @@
 			// 登录按钮事件
 			loginBtnsAction(){
 				console.log('登录')
-				uni.navigateTo({
-					url:'/pages/index/initialOpen'
-				})
+				this.openstatus = 'have'
+				if(this.openstatus == 'have'){
+					uni.navigateTo({
+						url:'/pages/index/overOpen'
+					})
+				}
+				else{
+					uni.navigateTo({
+						url:'/pages/index/initialOpen'
+					})
+				}
+
 			}
 
 		}
@@ -146,6 +159,10 @@
 		margin-top: 50px;
 		border-radius: 22px;
 		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
 	}
 	
 	.btns-normal{

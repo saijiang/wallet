@@ -67,7 +67,7 @@
 			//确定
 			sureAction(){
 				uni.showToast({
-					title:'确定',
+					title:'添加成功',
 					icon:'none'
 				})
 			}	
